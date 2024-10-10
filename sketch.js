@@ -4,7 +4,7 @@ let campoAventura;
 
 function setup() {
   createCanvas(800, 400);
-  createElement("h2", "Recomendador de filmes");
+  createElement("h2", "Recomendador de séries");
   createSpan("Sua idade:");
   campoIdade = createInput("5");
   campoFantasia = createCheckbox("Gosta de fantasia?");
@@ -27,27 +27,26 @@ function draw() {
 function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
   if (idade >= 10) {
     if (idade >= 14) {
-      return "O menino que descobriu o vento";
+      return "You";
     } else {
       if (idade >= 12) {
         if(gostaDeFantasia || gostaDeAventura) {
-          return "Homem aranha: no aranhaverso";          
+          return "Outer banks";          
         } else{
-         return "Ladrões de bicicleta";
+         return "The Winchesters";
         }
       } else {
         if (gostaDeFantasia) {
-          return "As aventuras de pi";
+          return "Euphoria";
         } else {
-          return "Depois da chuva";
+          return "Supernatrural";
         }
       }
     }
   } else {
     if (gostaDeFantasia) {
-      return "A viagem de chihiro";
+      return "The idol";
     } else {
-      return "O feitiço do tempo";
+      return "13 reasons why";
     }
   }
-}
