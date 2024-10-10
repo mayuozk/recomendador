@@ -1,17 +1,106 @@
-//Drama,romance,violencia,fantasia,aventura,ação
-//supernatural,16,drama,fantasia 
-//euphoria,18,drama,violencia 
-//You,18,thriller
-//The last of us,18,violencia,drama
-//Baby Reineer,18,violencia
-//Outer banks,16,Ação,aventura,drama
-//The summer i turnrd pretty,16,drama,romance
-//The Winchester,16,drama,fantasia
-function setup() {
-  createCanvas(400, 400);
+let campoIdade;
+let campoFantasia;
+let campoAventura;
 
-  let campoIdade
+function setup() {
+  createCanvas(800, 400);
+  createElement("h2", "Recomendador de séries");
+  createSpan("Sua idade:");
+  campoIdade = createInput("5");
+  campoFantasia = createCheckbox("Gosta de fantasia?");
+  campoAventura = createCheckbox("Gosta de aventura?");
+}
 
 function draw() {
-  background(220);
+  background("white");
+  let idade = campoIdade.value();
+  let gostaDeFantasia = campoFantasia.checked();
+  let gostaDeAventura = campoAventura.checked();
+  let recomendacao = geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura);
+
+  fill(color(76, 0, 115));
+  textAlign(CENTER, CENTER);
+  textSize(38);
+  text(recomendacao, width / 2, height / 2);
+}
+
+function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
+  if (idade >= 10) {
+    if (idade >= 14) {
+      return "supernatural";
+    } else {
+      if (idade >= 12) {
+        if(gostaDeFantasia || gostaDeAventura) {
+          return "the winchetrs";          
+        } else{
+         return "Euphoria";
+        }
+      } else {
+        if (gostaDeFantasia) {
+          return "let campoIdade;
+let campoFantasia;
+let campoAventura;
+
+function setup() {
+  createCanvas(800, 400);
+  createElement("h2", "Recomendador de filmes");
+  createSpan("Sua idade:");
+  campoIdade = createInput("5");
+  campoFantasia = createCheckbox("Gosta de fantasia?");
+  campoAventura = createCheckbox("Gosta de aventura?");
+}
+
+function draw() {
+  background("white");
+  let idade = campoIdade.value();
+  let gostaDeFantasia = campoFantasia.checked();
+  let gostaDeAventura = campoAventura.checked();
+  let recomendacao = geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura);
+
+  fill(color(76, 0, 115));
+  textAlign(CENTER, CENTER);
+  textSize(38);
+  text(recomendacao, width / 2, height / 2);
+}
+
+function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
+  if (idade >= 10) {
+    if (idade >= 14) {
+      return "you";
+    } else {
+      if (idade >= 12) {
+        if(gostaDeFantasia || gostaDeAventura) {
+          return "the winchesters";          
+        } else{
+         return "Euphoria";
+        }
+      } else {
+        if (gostaDeFantasia) {
+          return "supernatrural";
+        } else {
+          return "13 reaons why";
+        }
+      }
+    }
+  } else {
+    if (gostaDeFantasia) {
+      return "the idol";
+    } else {
+      return the vampire diaries";
+    }
+  }
+}
+";
+        } else {
+          return "The summer i turned pretty";
+        }
+      }
+    }
+  } else {
+    if (gostaDeFantasia) {
+      return "outer banks";
+    } else {
+      return "Gosipy girl";
+    }
+  }
 }
