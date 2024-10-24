@@ -12,13 +12,13 @@ function setup() {
 }
 
 function draw() {
-  background("white");
+  background(" pink");
   let idade = campoIdade.value();
   let gostaDeFantasia = campoFantasia.checked();
   let gostaDeAventura = campoAventura.checked();
   let recomendacao = geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura);
 
-  fill(color(76, 0, 115));
+  fill(color(79, 0, 113));
   textAlign(CENTER, CENTER);
   textSize(38);
   text(recomendacao, width / 2, height / 2);
@@ -50,3 +50,4 @@ function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
       return "13 reasons why";
     }
   }
+}
